@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
+const cache = require('express-redis-cache')();
+
 
 const { slow } = require('./routes');
 
@@ -21,3 +23,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   process.stdout.write(`server listening on port ${PORT}`);
 });
+
+// module.exports = app;
