@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
-const cache = require('express-redis-cache')({ expire: 10 });
+const cache = require('express-redis-cache')({ expire: 60 });
 
 
 const { slow } = require('./routes');
